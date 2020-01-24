@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/add_city_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add" />
+
+    <Button
+        android:id="@+id/del_city_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_delete" />
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <EditText
+            android:id="@+id/add_city_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/city_name"
+            android:inputType="textPersonName"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/add_city_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/add_city_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            app:layout_constraintBaseline_toBaselineOf="@+id/add_city_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/add_city_text" />
+    </TableRow>
+
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:listSelector="@android:color/darker_gray" />
+
+
+</LinearLayout>
